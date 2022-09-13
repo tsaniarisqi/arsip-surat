@@ -18,14 +18,14 @@
 
 	<!-- Nav Item - Arsip -->
 	<li class="nav-item active">
-		<a class="nav-link" href="arsip.html">
+		<a class="nav-link" href="index.php?arsip">
 			<i class="fas fa-fw fa-star"></i>
 			<span>Arsip</span></a>
 	</li>
 
 	<!-- Nav Item - About -->
 	<li class="nav-item active">
-		<a class="nav-link" href="about.html">
+		<a class="nav-link" href="index.php?about">
 			<i class="fas fa-fw fa-info-circle "></i>
 			<span>About</span></a>
 	</li>

@@ -34,12 +34,34 @@
 						?>
 							<td>
 								<ul class="list-inline mb-0">
-									<a href="edit-app-submission-forms.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-danger btn-icon-split">
+									<a class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
 										<span class="icon text-white-50">
 											<i class="fas fa-trash"></i>
 										</span>
 										<span class="text">Hapus</span>
 									</a>
+									<!-- Modal -->
+									<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLongTitle">Alert</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													Apakah anda yakin ingin menghapus arsip surat ini?
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+													<a href="delete-arsip.php?id=<?php echo ($row['id']) ?>">
+														<button name="delete" class="btn btn-primary">Ya </button>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
 									<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-warning btn-icon-split">
 										<span class="icon text-white-50">
 											<i class="fas fa-arrow-circle-down"></i>

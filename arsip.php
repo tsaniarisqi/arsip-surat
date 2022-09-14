@@ -62,5 +62,11 @@
 				</tbody>
 			</table>
 		</div>
+		<a href="index.php?arsip-forms" class="btn btn-light btn-icon-split">
+			<span class="icon text-white-50">
+				<i class="fas fa-plus"></i>
+			</span>
+			<span class="text">Arsipkan Surat</span>
+		</a>
 	</div>
 </div>

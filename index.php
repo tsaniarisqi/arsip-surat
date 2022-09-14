@@ -32,6 +32,8 @@
                             include("arsip.php");
                         } else if (isset($_REQUEST['about'])) {
                             include("about.php");
+                        } else if (isset($_REQUEST['arsip-forms'])) {
+                            include("arsip-forms.php");
                         } else (include "arsip.php");
                         ?>
                     </div>

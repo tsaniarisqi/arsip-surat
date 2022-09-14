@@ -22,34 +22,43 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>2022/PD3/TU001</td>
-						<td>Pengumuman</td>
-						<td>Nota Dinas WFH</td>
-						<td>2021-06-21 17:23</td>
-						<td>
-							<ul class="list-inline mb-0">
-
-								<a href="edit-app-submission-forms.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-danger btn-icon-split">
-									<span class="icon text-white-50">
-										<i class="fas fa-trash"></i>
-									</span>
-									<span class="text">Hapus</span>
-								</a>
-								<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-warning btn-icon-split">
-									<span class="icon text-white-50">
-										<i class="fas fa-arrow-circle-down"></i>
-									</span>
-									<span class="text">Unduh</span>
-								</a>
-								<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-primary btn-icon-split">
-									<span class="icon text-white-50">
-										<i class="fas fa-eye"></i>
-									</span>
-									<span class="text">Lihat</span>
-								</a>
-							</ul>
-						</td>
+						<?php
+						include 'koneksi.php';
+						$arsip = mysqli_query($koneksi, "SELECT * FROM arsip");
+						while ($row = mysqli_fetch_array($arsip)) {
+							echo "
+							<td>" . $row['no_surat'] . "</td>
+							<td>" . $row['kategori'] . "</td>
+							<td>" . $row['judul'] . "</td>
+							<td>" . $row['waktu_pengarsipan'] . "</td>";
+						?>
+							<td>
+								<ul class="list-inline mb-0">
+									<a href="edit-app-submission-forms.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-danger btn-icon-split">
+										<span class="icon text-white-50">
+											<i class="fas fa-trash"></i>
+										</span>
+										<span class="text">Hapus</span>
+									</a>
+									<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-warning btn-icon-split">
+										<span class="icon text-white-50">
+											<i class="fas fa-arrow-circle-down"></i>
+										</span>
+										<span class="text">Unduh</span>
+									</a>
+									<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-primary btn-icon-split">
+										<span class="icon text-white-50">
+											<i class="fas fa-eye"></i>
+										</span>
+										<span class="text">Lihat</span>
+									</a>
+								</ul>
+							</td>
 					</tr>
+				<?php
+						}
+				?>
+
 				</tbody>
 			</table>
 		</div>

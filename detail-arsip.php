@@ -43,7 +43,7 @@
 									<div class="card-body">
 										<?php
 										if (isset($_GET['id'])) {
-											$id    = $_GET['id'];
+											$id = $_GET['id'];
 										} else {
 											die("Error. No ID Selected!");
 										}
@@ -78,13 +78,13 @@
 														</span>
 														<span class="text">Kembali</span>
 													</a>
-													<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-warning btn-icon-split">
+													<a href="download-arsip-file.php?id=<?php echo ($result['id']) ?>" class="btn btn-warning btn-icon-split">
 														<span class="icon text-white-50">
 															<i class="fas fa-arrow-circle-down"></i>
 														</span>
 														<span class="text">Unduh</span>
 													</a>
-													<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-success btn-icon-split">
+													<a href="delete-app-submission.php?id_pengajuan=<?php echo ($result['id_pengajuan']) ?>" class="btn btn-success btn-icon-split">
 														<span class="icon text-white-50">
 															<i class="fas fa-edit"></i>
 														</span>

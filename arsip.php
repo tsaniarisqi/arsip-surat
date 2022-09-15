@@ -68,7 +68,7 @@
 										</span>
 										<span class="text">Unduh</span>
 									</a>
-									<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-primary btn-icon-split">
+									<a href="detail-arsip.php?id=<?php echo ($row['id']) ?>" class="btn btn-primary btn-icon-split">
 										<span class="icon text-white-50">
 											<i class="fas fa-eye"></i>
 										</span>

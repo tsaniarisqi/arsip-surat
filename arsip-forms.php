@@ -17,7 +17,7 @@
 
 <div class="card mb-4">
 	<div class="card-body">
-		<form method="POST" action="add-arsip.php">
+		<form method="POST" action="add-arsip.php" enctype="multipart/form-data">
 			<div class="form-group row">
 				<label for="no_surat" class="col-sm-2 col-form-label">Nomor Surat</label>
 				<div class="col-sm-10">
@@ -44,10 +44,10 @@
 			<div class="form-group row">
 				<label for="file" class="col-sm-2 col-form-label">File Surat (PDF)</label>
 				<div class="col-sm-10">
-					<div class="input-group mb-3">
+					<input type="hidden" name="file_surat" value="<?php echo $query['file_surat']; ?>">
+					<div class="form-group">
 						<div class="custom-file">
-							<input type="file" class="custom-file-input" id="inputGroupFile02">
-							<label class="custom-file-label" for="inputGroupFile02">Browse file</label>
+							<input type="file" style="height:auto" class="form-control-file form-control height-auto" id="customFile" name="file_surat" required>
 						</div>
 					</div>
 				</div>

@@ -60,7 +60,7 @@
 										printf("Judul: ");
 										echo $result['judul'];
 										printf('</br>');
-										printf("Waktu Pengarsipan");
+										printf("Waktu Pengarsipan: ");
 										echo $result['waktu_pengarsipan'];
 										printf('</br></br>');
 										?>
@@ -84,7 +84,7 @@
 														</span>
 														<span class="text">Unduh</span>
 													</a>
-													<a href="delete-app-submission.php?id_pengajuan=<?php echo ($result['id_pengajuan']) ?>" class="btn btn-success btn-icon-split">
+													<a href="edit-arsip.php?id=<?php echo ($result['id']) ?>" class="btn btn-success btn-icon-split">
 														<span class="icon text-white-50">
 															<i class="fas fa-edit"></i>
 														</span>

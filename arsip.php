@@ -62,7 +62,7 @@
 											</div>
 										</div>
 									</div>
-									<a href="delete-app-submission.php?id_pengajuan=<?php echo ($row['id_pengajuan']) ?>" class="btn btn-warning btn-icon-split">
+									<a href="download-arsip-file.php?id=<?php echo ($row['id']) ?>" class="btn btn-warning btn-icon-split">
 										<span class="icon text-white-50">
 											<i class="fas fa-arrow-circle-down"></i>
 										</span>

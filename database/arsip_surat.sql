@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2022 at 03:54 AM
+-- Generation Time: Sep 16, 2022 at 05:26 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -33,8 +33,16 @@ CREATE TABLE `arsip` (
   `no_surat` varchar(15) NOT NULL,
   `kategori` varchar(30) NOT NULL,
   `judul` varchar(30) NOT NULL,
+  `file_surat` varchar(100) NOT NULL,
   `waktu_pengarsipan` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `arsip`
+--
+
+INSERT INTO `arsip` (`id`, `no_surat`, `kategori`, `judul`, `file_surat`, `waktu_pengarsipan`) VALUES
+(24, '2022/PD1/TU/001', 'Nota Dinas', 'undangan buka bersama', '1383-Article Text-2719-1-10-20210714.pdf', '2022-09-16 10:15:06');
 
 --
 -- Indexes for dumped tables
@@ -54,7 +62,7 @@ ALTER TABLE `arsip`
 -- AUTO_INCREMENT for table `arsip`
 --
 ALTER TABLE `arsip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
